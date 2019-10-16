@@ -12,12 +12,11 @@ def random_number_generator(i):
     modulus = 2**15
     seed = 1000
 
-    def helper(j):
-        if j <= 0:
-            return seed
-        return (multiplier * helper(j-1) + increment) % modulus
+    res = seed
+    for j in range(1, i + 1):
+        res = (multiplier * res + increment) % modulus
 
-    return helper(i) / modulus
+    return res / modulus
 
 def random_variable_generator(random_num):
     def inverse_cdf(p):

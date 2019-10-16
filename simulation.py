@@ -1,9 +1,6 @@
 import random
 import math
 import numpy as np
-import sys
-
-sys.setrecursionlimit(1500)
 
 def random_number_generator(i):
 
@@ -81,7 +78,7 @@ def main():
     print()
 
     N = 1000
-    print(f"Running {N} trials.\n")
+    print(f"Running {N} trials.")
 
     times = []
 
@@ -93,6 +90,7 @@ def main():
         times.append(time)
 
     times = np.array(times)
+
     print(f"Finished running {N} trials.\n")
 
     print(f"Mean: {np.mean(times)}")
